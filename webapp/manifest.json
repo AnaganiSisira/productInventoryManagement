@@ -1,0 +1,118 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "productinventorymanagement",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.19.0",
+      "toolsId": "040c1e12-e94c-4457-ad80-ff372f15131b"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.140.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "productinventorymanagement.i18n.i18n"
+        }
+      },
+      "productModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/products.json"
+      },
+      "totalValueModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "totalValue": 0,
+          "showRestockNeeded": false
+        },
+        "preload": false
+      },
+      "viewModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "dialogMode": true,
+          "listLayout": true
+        },
+        "preload": false
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "productinventorymanagement.view",
+        "async": true,
+        "viewPath": "productinventorymanagement.view"
+      },
+      "routes": [
+        {
+          "name": "RouteProduct",
+          "pattern": ":?query:",
+          "target": [
+            "TargetProduct"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetProduct": {
+          "id": "Product",
+          "name": "Product"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "productinventorymanagement.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

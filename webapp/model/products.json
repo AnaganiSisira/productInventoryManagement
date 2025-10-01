@@ -1,0 +1,362 @@
+{
+    "Products": [
+        {
+            "productID": "P001",
+            "productName": "Laptop",
+            "category": "Electronics",
+            "price": 75000,
+            "stockQuantity": 8,
+            "reorderLevel": 10,
+            "manufacturer": "HP",
+            "expiryDate": null,
+            "imageURL": "images/laptop.jpg",
+            "supplier": "HP",
+            "lastRestocked": "2025-09-01"
+        },
+        {
+            "productID": "P002",
+            "productName": "Smartphone",
+            "category": "Electronics",
+            "price": 35000,
+            "stockQuantity": 25,
+            "reorderLevel": 15,
+            "manufacturer": "Samsung",
+            "expiryDate": null,
+            "imageURL": "images/smartphone.jpg",
+            "supplier": "Samsung",
+            "lastRestocked": "2025-09-15"
+        },
+        {
+            "productID": "P003",
+            "productName": "Headphones",
+            "category": "Electronics",
+            "price": 2500,
+            "stockQuantity": 120,
+            "reorderLevel": 20,
+            "manufacturer": "Sony",
+            "expiryDate": null,
+            "imageURL": "images/headphones.jpg",
+            "supplier": "Sony",
+            "lastRestocked": "2025-08-20"
+        },
+        {
+            "productID": "P004",
+            "productName": "Sofa",
+            "category": "Furniture",
+            "price": 20000,
+            "stockQuantity": 5,
+            "reorderLevel": 8,
+            "manufacturer": "Ikea",
+            "expiryDate": null,
+            "imageURL": "images/sofa.jpg",
+            "supplier": "Ikea",
+            "lastRestocked": "2025-08-10"
+        },
+        {
+            "productID": "P005",
+            "productName": "Dining Table",
+            "category": "Furniture",
+            "price": 15000,
+            "stockQuantity": 15,
+            "reorderLevel": 10,
+            "manufacturer": "Ikea",
+            "expiryDate": null,
+            "imageURL": "images/dining_table.jpg",
+            "supplier": "Ikea",
+            "lastRestocked": "2025-09-05"
+        },
+        {
+            "productID": "P006",
+            "productName": "Office Chair",
+            "category": "Furniture",
+            "price": 7000,
+            "stockQuantity": 60,
+            "reorderLevel": 20,
+            "manufacturer": "Urban Ladder",
+            "expiryDate": null,
+            "imageURL": "images/office_chair.jpg",
+            "supplier": "Urban Ladder",
+            "lastRestocked": "2025-09-20"
+        },
+        {
+            "productID": "P007",
+            "productName": "T-Shirt",
+            "category": "Clothing",
+            "price": 999,
+            "stockQuantity": 200,
+            "reorderLevel": 50,
+            "manufacturer": "Levis",
+            "expiryDate": null,
+            "imageURL": "images/tshirt.jpg",
+            "supplier": "Levis",
+            "lastRestocked": "2025-09-12"
+        },
+        {
+            "productID": "P008",
+            "productName": "Jeans",
+            "category": "Clothing",
+            "price": 2499,
+            "stockQuantity": 45,
+            "reorderLevel": 30,
+            "manufacturer": "Levis",
+            "expiryDate": null,
+            "imageURL": "images/jeans.jpg",
+            "supplier": "Levis",
+            "lastRestocked": "2025-09-15"
+        },
+        {
+            "productID": "P009",
+            "productName": "Jacket",
+            "category": "Clothing",
+            "price": 4999,
+            "stockQuantity": 12,
+            "reorderLevel": 20,
+            "manufacturer": "Zara",
+            "expiryDate": null,
+            "imageURL": "images/jacket.jpg",
+            "supplier": "Zara",
+            "lastRestocked": "2025-08-30"
+        },
+        {
+            "productID": "P010",
+            "productName": "Sneakers",
+            "category": "Clothing",
+            "price": 3500,
+            "stockQuantity": 90,
+            "reorderLevel": 50,
+            "manufacturer": "Nike",
+            "expiryDate": null,
+            "imageURL": "images/sneakers.jpg",
+            "supplier": "Nike",
+            "lastRestocked": "2025-09-18"
+        },
+        {
+            "productID": "P011",
+            "productName": "Rice Bag",
+            "category": "Food",
+            "price": 1200,
+            "stockQuantity": 30,
+            "reorderLevel": 20,
+            "manufacturer": "BigBasket",
+            "expiryDate": "2026-09-10",
+            "imageURL": "images/rice_bag.jpg",
+            "supplier": "BigBasket",
+            "lastRestocked": "2025-09-10"
+        },
+        {
+            "productID": "P012",
+            "productName": "Wheat Flour",
+            "category": "Food",
+            "price": 900,
+            "stockQuantity": 55,
+            "reorderLevel": 30,
+            "manufacturer": "BigBasket",
+            "expiryDate": "2026-08-15",
+            "imageURL": "images/wheat_flour.jpg",
+            "supplier": "BigBasket",
+            "lastRestocked": "2025-09-14"
+        },
+        {
+            "productID": "P013",
+            "productName": "Cooking Oil",
+            "category": "Food",
+            "price": 1800,
+            "stockQuantity": 8,
+            "reorderLevel": 15,
+            "manufacturer": "Fortune",
+            "expiryDate": "2026-01-01",
+            "imageURL": "images/cooking_oil.jpg",
+            "supplier": "Fortune",
+            "lastRestocked": "2025-09-02"
+        },
+        {
+            "productID": "P014",
+            "productName": "Milk Pack",
+            "category": "Food",
+            "price": 60,
+            "stockQuantity": 300,
+            "reorderLevel": 100,
+            "manufacturer": "Amul",
+            "expiryDate": "2025-10-05",
+            "imageURL": "images/milk_pack.jpg",
+            "supplier": "Amul",
+            "lastRestocked": "2025-09-29"
+        },
+        {
+            "productID": "P015",
+            "productName": "Refrigerator",
+            "category": "Electronics",
+            "price": 45000,
+            "stockQuantity": 6,
+            "reorderLevel": 8,
+            "manufacturer": "LG",
+            "expiryDate": null,
+            "imageURL": "images/refrigerator.jpg",
+            "supplier": "LG",
+            "lastRestocked": "2025-08-25"
+        },
+        {
+            "productID": "P016",
+            "productName": "Microwave",
+            "category": "Electronics",
+            "price": 12000,
+            "stockQuantity": 22,
+            "reorderLevel": 15,
+            "manufacturer": "Samsung",
+            "expiryDate": null,
+            "imageURL": "images/microwave.jpg",
+            "supplier": "Samsung",
+            "lastRestocked": "2025-09-19"
+        },
+        {
+            "productID": "P017",
+            "productName": "Bed Frame",
+            "category": "Furniture",
+            "price": 25000,
+            "stockQuantity": 18,
+            "reorderLevel": 10,
+            "manufacturer": "Pepperfry",
+            "expiryDate": null,
+            "imageURL": "images/bed_frame.jpg",
+            "supplier": "Pepperfry",
+            "lastRestocked": "2025-09-01"
+        },
+        {
+            "productID": "P018",
+            "productName": "Wardrobe",
+            "category": "Furniture",
+            "price": 30000,
+            "stockQuantity": 7,
+            "reorderLevel": 10,
+            "manufacturer": "Godrej",
+            "expiryDate": null,
+            "imageURL": "images/wardrobe.jpg",
+            "supplier": "Godrej",
+            "lastRestocked": "2025-09-09"
+        },
+        {
+            "productID": "P019",
+            "productName": "Shampoo",
+            "category": "Food",
+            "price": 350,
+            "stockQuantity": 75,
+            "reorderLevel": 30,
+            "manufacturer": "Dove",
+            "expiryDate": "2026-02-01",
+            "imageURL": "images/shampoo.jpg",
+            "supplier": "Dove",
+            "lastRestocked": "2025-09-21"
+        },
+        {
+            "productID": "P020",
+            "productName": "Biscuits",
+            "category": "Food",
+            "price": 50,
+            "stockQuantity": 500,
+            "reorderLevel": 100,
+            "manufacturer": "Parle",
+            "expiryDate": "2026-05-01",
+            "imageURL": "images/biscuits.jpg",
+            "supplier": "Parle",
+            "lastRestocked": "2025-09-28"
+        }
+    ],
+    "Suppliers": [
+        {
+            "supplierID": "S001",
+            "supplierName": "HP",
+            "contact": "+91-9876543210",
+            "rating": 4.5
+        },
+        {
+            "supplierID": "S002",
+            "supplierName": "Samsung",
+            "contact": "+91-9123456780",
+            "rating": 4.7
+        },
+        {
+            "supplierID": "S003",
+            "supplierName": "Sony",
+            "contact": "+91-9988776655",
+            "rating": 4.3
+        },
+        {
+            "supplierID": "S004",
+            "supplierName": "Ikea",
+            "contact": "+91-9001122334",
+            "rating": 4.6
+        },
+        {
+            "supplierID": "S005",
+            "supplierName": "Urban Ladder",
+            "contact": "+91-9112233445",
+            "rating": 4.2
+        },
+        {
+            "supplierID": "S006",
+            "supplierName": "Levis",
+            "contact": "+91-9003344556",
+            "rating": 4.4
+        },
+        {
+            "supplierID": "S007",
+            "supplierName": "Zara",
+            "contact": "+91-9011223344",
+            "rating": 4.3
+        },
+        {
+            "supplierID": "S008",
+            "supplierName": "Nike",
+            "contact": "+91-9009988776",
+            "rating": 4.5
+        },
+        {
+            "supplierID": "S009",
+            "supplierName": "BigBasket",
+            "contact": "+91-9122334455",
+            "rating": 4.6
+        },
+        {
+            "supplierID": "S010",
+            "supplierName": "Fortune",
+            "contact": "+91-9007766554",
+            "rating": 4.4
+        },
+        {
+            "supplierID": "S011",
+            "supplierName": "Amul",
+            "contact": "+91-9012345678",
+            "rating": 4.7
+        },
+        {
+            "supplierID": "S012",
+            "supplierName": "LG",
+            "contact": "+91-9988112233",
+            "rating": 4.5
+        },
+        {
+            "supplierID": "S013",
+            "supplierName": "Pepperfry",
+            "contact": "+91-9001122998",
+            "rating": 4.4
+        },
+        {
+            "supplierID": "S014",
+            "supplierName": "Godrej",
+            "contact": "+91-9002233445",
+            "rating": 4.3
+        },
+        {
+            "supplierID": "S015",
+            "supplierName": "Dove",
+            "contact": "+91-9003344557",
+            "rating": 4.2
+        },
+        {
+            "supplierID": "S016",
+            "supplierName": "Parle",
+            "contact": "+91-9005566778",
+            "rating": 4.6
+        }
+    ]
+}

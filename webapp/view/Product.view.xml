@@ -1,0 +1,76 @@
+<mvc:View controllerName="productinventorymanagement.controller.Product"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:p13n="sap.m.p13n"
+	xmlns:ce="sap.ui.codeeditor"
+	xmlns="sap.m">
+
+	<Table id="idProductsTable" inset="false" items="{productModel>/Products}">
+
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="{i18n>title}" level="H2"/>
+				<ToolbarSpacer/>
+				<CheckBox text="Restock Needed" selected="{viewModel>/showRestockNeeded}" select=".onRestockFilterChange" />
+				<Button icon="sap-icon://refresh" press="onTablePersoRefresh">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<Button icon="sap-icon://action-settings" press="onPersoButtonPressed">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+			</OverflowToolbar>
+		</headerToolbar>
+
+		<columns>
+			<Column width="12em">
+				<Text text="{i18n>COLUMN_PRODUCT}" />
+			</Column>
+			<Column minScreenWidth="Tablet">
+				<Text text="{i18n>COLUMN_CATEGORY}" />
+			</Column>
+			<Column minScreenWidth="Desktop" hAlign="End">
+				<Text text="{i18n>COLUMN_PRICE}" />
+			</Column>
+			<Column minScreenWidth="Desktop" hAlign="Center">
+				<Text text="{i18n>COLUMN_STOCK}" />
+			</Column>
+			<Column>
+				<Text text="{i18n>COLUMN_SUPPLIER}" />
+			</Column>
+			<Column hAlign="End">
+				<Text text="{i18n>COLUMN_LAST_RESTOCKED}" />
+			</Column>
+			<Column hAlign="End">
+				<Text text="{i18n>COLUMN_LAST_RESTOCKED}" />
+			</Column>
+		</columns>
+
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier title="{productModel>productName}"/>
+					<Text text="{productModel>category}" />
+					<ObjectNumber number="{productModel>price}" unit="₹"/>
+					<ObjectNumber number="{productModel>stockQuantity}" state="{ path: 'productModel>stockQuantity', formatter: '.formatter.quantityState'}"/>
+					<Text text="{productModel>supplier}" />
+					<Text text="{productModel>lastRestocked}" />
+					<ObjectNumber number="{ parts: [{path: 'productModel>price'},{path: 'productModel>stockQuantity'}],formatter: '.formatter.rowTotalValue'}" unit="₹"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
+	<VBox class="sapUiSmallMargin">
+		<p13n:Popup id="sorter" title="{i18n>TABLE_SETTINGS_TITLE}" close="onClose" warningText="{i18n>TABLE_SETTINGS_WARNING}" reset=".reset">
+			<p13n:panels>
+				<p13n:SortPanel id="sortPanel" title="{i18n>SORT_PANEL_TITLE}" change="parseP13nState"/>
+				<p13n:GroupPanel id="groupPanel" title="{i18n>GROUP_PANEL_TITLE}" change="parseP13nState"/>
+			</p13n:panels>
+		</p13n:Popup>
+	</VBox>
+
+</mvc:View>
