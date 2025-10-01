@@ -119,7 +119,6 @@ sap.ui.define([
         },
 
        
-
         onRestockFilterChange: function (oEvent) {
             var bSelected = oEvent.getParameter("selected"); 
             var oTable = this.getView().byId("idProductsTable");

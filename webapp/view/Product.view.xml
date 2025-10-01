@@ -2,7 +2,6 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	xmlns:p13n="sap.m.p13n"
-	xmlns:ce="sap.ui.codeeditor"
 	xmlns="sap.m">
 
 	<Table id="idProductsTable" inset="false" items="{productModel>/Products}">
@@ -11,7 +10,7 @@
 			<OverflowToolbar>
 				<Title text="{i18n>title}" level="H2"/>
 				<ToolbarSpacer/>
-				<CheckBox text="Restock Needed" selected="{viewModel>/showRestockNeeded}" select=".onRestockFilterChange" />
+				<CheckBox text="{i18n>Restock_Needed}" selected="{viewModel>/showRestockNeeded}" select=".onRestockFilterChange" />
 				<Button icon="sap-icon://refresh" press="onTablePersoRefresh">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
