@@ -127,7 +127,8 @@ sap.ui.define([
                     this.byId("addRestock").setVisible(true);
                 } else {
                     oBinding.filter([]);
-                    this.byId("addRestock").setVisible(false);               
+                    this.byId("addRestock").setVisible(false);   
+                    this.removeSelection();            
                 }
             }
         },
@@ -264,8 +265,7 @@ sap.ui.define([
                 });
                 oModel.setProperty("/Products", aProducts);
                 this.removeSelection();
-                this.byId("bulkDeleteBtn").setVisible(false);
-                this.byId("UpdateBulkPriceBtn").setVisible(false);
+
                 MessageToast.show("Selected products deleted!");
             }.bind(this);
 
@@ -378,8 +378,6 @@ sap.ui.define([
                 }.bind(this)
             });
             this.removeSelection();
-            this.byId("UpdateBulkPriceBtn").setVisible(false);
-            this.byId("bulkDeleteBtn").setVisible(false);
         },
 
         ExportToExcel: function () {
@@ -432,7 +430,7 @@ sap.ui.define([
                     oProduct.stockQuantity = iOldStock + (isNaN(iAddedStock) ? 0 : iAddedStock);
 
                     if (oUpdated.newlastRestocked) {
-                        oProduct.lastRestocked = oUpdated.newlastRestocked;
+                        oProduct.lastRestocked = formatter.formatDate(new Date);
                     }
 
                         if (oUpdated.newPrice) {

@@ -88,6 +88,8 @@ sap.ui.define([
             var oTable = this.byId("idProductsTable");
             oTable.removeSelections();
             this.getView().getModel("viewModel").setProperty("/isMultiSelectActive", false);
+            this.byId("bulkDeleteBtn").setVisible(false);
+            this.byId("UpdateBulkPriceBtn").setVisible(false);
 
         }
 

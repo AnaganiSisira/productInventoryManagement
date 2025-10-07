@@ -37,7 +37,7 @@
                                 <ObjectNumber number="{createModel>stockQuantity}" />
                                 <Input value="{createModel>newStockQuantity}" type="Number" change=".onIndividualPercentageChange"/>
                                 <Input value="{createModel>supplier}"/>
-                                <DatePicker value="{createModel>newlastRestocked}" displayFormat="long" valueFormat="yyyy-MM-dd" required="true"/>
+                                <DatePicker value="{createModel>newlastRestocked}"  displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd" required="true" editable="false"/>
                             </cells>
                         </ColumnListItem>
                     </items>
