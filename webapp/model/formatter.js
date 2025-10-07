@@ -19,7 +19,12 @@ sap.ui.define([
             price = parseFloat(price) || 0;
             qty = parseFloat(qty) || 0;
             return price * qty;
+        },
+
+        newPrice: function (price, individualPercent) {
+            return (price + (price * individualPercent / 100)).toFixed(2);
         }
+
 
     };
 });

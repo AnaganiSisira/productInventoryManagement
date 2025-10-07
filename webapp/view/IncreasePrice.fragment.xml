@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="bulkPriceDialog" title="Bulk Price Update" stretchOnPhone="true">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <Label text="Apply same % to all selected products (optional)"/>
+                <Input id="inpBulkPercentage" value="{createModel>/bulkPercent}" type="Number" placeholder="Enter % e.g., 10" liveChange=".onBulkPercentageChange"/>
+
+                <Table id="bulkPriceTable" items="{createModel>/selectedProducts}">
+                    <columns>
+                        <Column>
+                            <Text text="Product"/>
+                        </Column>
+                        <Column>
+                            <Text text="Current Price"/>
+                        </Column>
+                        <Column>
+                            <Text text="Increase %"/>
+                        </Column>
+                        <Column>
+                            <Text text="New Price"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{createModel>productName}"/>
+                                <ObjectNumber number="{createModel>price}" unit="₹"/>
+                                <Input value="{createModel>individualPercent}" type="Number" change=".onIndividualPercentageChange"/>
+                                <ObjectNumber number="{createModel>newPrice}" unit="₹"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Accept" press=".onSaveInPrice"/>
+                <Button text="Cancel" type="Reject" press=".onCancelInPrice"/>
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>

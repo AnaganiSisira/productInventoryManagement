@@ -4,18 +4,23 @@
 	xmlns:p13n="sap.m.p13n"
 	xmlns="sap.m">
 
-	<Table id="idProductsTable" inset="false" items="{productModel>/Products}">
+	<Table id="idProductsTable" inset="false" items="{productModel>/Products}" mode="MultiSelect" selectionChange=".onSelectionChange">
 
 		<headerToolbar>
 			<OverflowToolbar>
 				<Title text="{i18n>title}" level="H2"/>
 				<ToolbarSpacer/>
 				<CheckBox text="{i18n>Restock_Needed}" selected="{viewModel>/showRestockNeeded}" select=".onRestockFilterChange" />
+				<Button icon="sap-icon://add" text="Restock Selected" press=".onAddRestock" type="Reject" id="addRestock" visible="false"/>
+				<Button icon="sap-icon://delete" text="Delete Selected" press=".onBulkDelete" type="Reject" id="bulkDeleteBtn" visible="false"/>
+				<Button icon="sap-icon://warning" text="Update Price" press=".onBulkPriceBtn" type="Accept" id="UpdateBulkPriceBtn" visible="false"/>
+				<Button icon="sap-icon://add" press="onAddProduct"/>
 				<Button icon="sap-icon://refresh" press="onTablePersoRefresh">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
 				</Button>
+				<Button icon="sap-icon://excel-attachment" press=".onExportToExcel" />
 				<Button icon="sap-icon://action-settings" press="onPersoButtonPressed">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
@@ -43,8 +48,8 @@
 			<Column hAlign="End">
 				<Text text="{i18n>COLUMN_LAST_RESTOCKED}" />
 			</Column>
-			<Column hAlign="End">
-				<Text text="{i18n>COLUMN_LAST_RESTOCKED}" />
+			<Column hAlign="Center">
+				<Text text="Actions" />
 			</Column>
 		</columns>
 
@@ -57,7 +62,10 @@
 					<ObjectNumber number="{productModel>stockQuantity}" state="{ path: 'productModel>stockQuantity', formatter: '.formatter.quantityState'}"/>
 					<Text text="{productModel>supplier}" />
 					<Text text="{productModel>lastRestocked}" />
-					<ObjectNumber number="{ parts: [{path: 'productModel>price'},{path: 'productModel>stockQuantity'}],formatter: '.formatter.rowTotalValue'}" unit="₹"/>
+					<HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginBeginEnd">
+						<Button icon="sap-icon://edit" press=".onEditProduct" tooltip="Edit Product" type="Transparent"/>
+						<Button icon="sap-icon://delete" press=".onDeleteProduct" tooltip="Delete Product" type="Transparent" class="sapUiTinyMarginBegin" enabled="{= !${viewModel>/isMultiSelectActive} }"/>
+					</HBox>
 				</cells>
 			</ColumnListItem>
 		</items>

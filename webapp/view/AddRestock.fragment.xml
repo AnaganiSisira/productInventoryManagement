@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog id="reStockDialog" title="Update Stock" stretchOnPhone="true">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                
+                <Table id="reStockTable" items="{createModel>/selectedProducts}">
+                    <columns>
+                        <Column>
+                            <Text text="Product"/>
+                        </Column>
+                        <Column>
+                            <Text text="Current Price"/>
+                        </Column>
+                        <Column>
+                            <Text text="New Price"/>
+                        </Column>
+                        <Column>
+                            <Text text="Stock Quantity"/>
+                        </Column>
+                          <Column>
+                            <Text text="New Stock Quantity"/>
+                        </Column>
+                          <Column>
+                            <Text text="supplier"/>
+                        </Column>
+                         <Column>
+                            <Text text="Re-Stocked Date"/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{createModel>productName}"/>
+                                <ObjectNumber number="{createModel>price}" unit="₹"/>
+                                <Input value="{createModel>newPrice}" type="Number" />
+                                <ObjectNumber number="{createModel>stockQuantity}" />
+                                <Input value="{createModel>newStockQuantity}" type="Number" change=".onIndividualPercentageChange"/>
+                                <Input value="{createModel>supplier}"/>
+                                <DatePicker value="{createModel>newlastRestocked}" displayFormat="long" valueFormat="yyyy-MM-dd" required="true"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </VBox>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Accept" press=".onSaveRestock"/>
+                <Button text="Cancel" type="Reject" press=".onCancelReStock"/>
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>
