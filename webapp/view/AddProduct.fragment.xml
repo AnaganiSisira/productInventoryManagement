@@ -3,39 +3,39 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core">
 
-    <Dialog id="addProductDialog" title="Add New Product" stretchOnPhone="true">
+    <Dialog id="addProductDialog" title="{i18n>ADD_PRODUCT_DIALOG_TITLE}">
         <content>
             <VBox class="sapUiSmallMargin">
                 <f:SimpleForm editable="true" layout="ColumnLayout" columnsM="2" columnsL="2" columnsXL="2">
                     <f:content>
-                        <Label text="Product Name"/>
-                        <Input value="{createModel>/productName}" required="true" placeholder="Enter product name"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_NAME}"/>
+                        <Input value="{createModel>/productName}" required="true" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_NAME}"/>
 
-                        <Label text="Category"/>
-                        <Input value="{createModel>/category}" required="true" placeholder="Enter category"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_CATEGORY}"/>
+                        <Input value="{createModel>/category}" required="true" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_CATEGORY}"/>
 
-                        <Label text="Price"/>
-                        <Input value="{createModel>/price}" type="Number" required="true" placeholder="Enter price"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_PRICE}"/>
+                        <Input value="{createModel>/price}" type="Number" required="true" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_PRICE}"/>
 
-                        <Label text="Stock Quantity"/>
-                        <Input value="{createModel>/stockQuantity}" type="Number" required="true" placeholder="Enter stock"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_STOCK}"/>
+                        <Input value="{createModel>/stockQuantity}" type="Number" required="true" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_STOCK}"/>
 
-                        <Label text="Supplier"/>
-                        <Input value="{createModel>/supplier}" required="true" placeholder="Enter supplier"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_SUPPLIER}"/>
+                        <Input value="{createModel>/supplier}" required="true" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_SUPPLIER}"/>
 
-                        <Label text="Last Restocked"/>
-                        <DatePicker value="{createModel>/lastRestocked}" placeholder="Select date" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
+                        <Label text="{i18n>ADD_PRODUCT_LABEL_LAST_RESTOCKED}"/>
+                        <DatePicker value="{createModel>/lastRestocked}" placeholder="{i18n>ADD_PRODUCT_PLACEHOLDER_DATE}" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd"/>
                     </f:content>
                 </f:SimpleForm>
             </VBox>
         </content>
-
         <footer>
             <Toolbar>
                 <ToolbarSpacer/>
-                <Button id="dialogActionBtn" text="Add" type="Accept" press="onSaveProduct"/>
-                <Button text="Cancel" type="Reject" press="onCancelProduct"/>
+                <Button id="dialogActionBtn" text="{i18n>ADD_PRODUCT_BUTTON_ADD}" type="Accept" press="onSaveProduct"/>
+                <Button text="{i18n>ADD_PRODUCT_BUTTON_CANCEL}" type="Reject" press="onCancelProduct"/>
             </Toolbar>
         </footer>
     </Dialog>
+
 </core:FragmentDefinition>

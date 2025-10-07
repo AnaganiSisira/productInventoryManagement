@@ -1,31 +1,30 @@
 <core:FragmentDefinition xmlns="sap.m"
     xmlns:core="sap.ui.core">
-    <Dialog id="reStockDialog" title="Update Stock" stretchOnPhone="true">
+    <Dialog id="reStockDialog" title="{i18n>RESTOCK_DIALOG_TITLE}" stretchOnPhone="true">
         <content>
             <VBox class="sapUiSmallMargin">
-                
                 <Table id="reStockTable" items="{createModel>/selectedProducts}">
                     <columns>
                         <Column>
-                            <Text text="Product"/>
+                            <Text text="{i18n>RESTOCK_COLUMN_PRODUCT}"/>
                         </Column>
                         <Column>
-                            <Text text="Current Price"/>
+                            <Text text="{i18n>RESTOCK_COLUMN_CURRENT_PRICE}"/>
                         </Column>
                         <Column>
-                            <Text text="New Price"/>
+                            <Text text="{i18n>RESTOCK_COLUMN_NEW_PRICE}"/>
                         </Column>
                         <Column>
-                            <Text text="Stock Quantity"/>
+                            <Text text="{i18n>RESTOCK_COLUMN_CURRENT_STOCK}"/>
                         </Column>
-                          <Column>
-                            <Text text="New Stock Quantity"/>
+                        <Column>
+                            <Text text="{i18n>RESTOCK_COLUMN_NEW_STOCK}"/>
                         </Column>
-                          <Column>
-                            <Text text="supplier"/>
+                        <Column>
+                            <Text text="{i18n>RESTOCK_COLUMN_SUPPLIER}"/>
                         </Column>
-                         <Column>
-                            <Text text="Re-Stocked Date"/>
+                        <Column>
+                            <Text text="{i18n>RESTOCK_COLUMN_DATE}"/>
                         </Column>
                     </columns>
                     <items>
@@ -33,11 +32,11 @@
                             <cells>
                                 <Text text="{createModel>productName}"/>
                                 <ObjectNumber number="{createModel>price}" unit="₹"/>
-                                <Input value="{createModel>newPrice}" type="Number" />
-                                <ObjectNumber number="{createModel>stockQuantity}" />
+                                <Input value="{createModel>newPrice}" type="Number"/>
+                                <ObjectNumber number="{createModel>stockQuantity}"/>
                                 <Input value="{createModel>newStockQuantity}" type="Number" change=".onIndividualPercentageChange"/>
                                 <Input value="{createModel>supplier}"/>
-                                <DatePicker value="{createModel>newlastRestocked}"  displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd" required="true" editable="false"/>
+                                <DatePicker value="{createModel>newlastRestocked}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd" required="true" editable="false"/>
                             </cells>
                         </ColumnListItem>
                     </items>
@@ -47,8 +46,8 @@
         <footer>
             <Toolbar>
                 <ToolbarSpacer/>
-                <Button text="Save" type="Accept" press=".onSaveRestock"/>
-                <Button text="Cancel" type="Reject" press=".onCancelReStock"/>
+                <Button text="{i18n>RESTOCK_BUTTON_SAVE}" type="Accept" press=".onSaveRestock"/>
+                <Button text="{i18n>RESTOCK_BUTTON_CANCEL}" type="Reject" press=".onCancelReStock"/>
             </Toolbar>
         </footer>
     </Dialog>

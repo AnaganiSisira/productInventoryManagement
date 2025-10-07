@@ -11,17 +11,19 @@
 				<Title text="{i18n>title}" level="H2"/>
 				<ToolbarSpacer/>
 				<CheckBox text="{i18n>Restock_Needed}" selected="{viewModel>/showRestockNeeded}" select=".onRestockFilterChange" />
-				<Button icon="sap-icon://add" text="Restock Selected" press=".onAddRestock" type="Reject" id="addRestock" visible="false"/>
-				<Button icon="sap-icon://delete" text="Delete Selected" press=".onBulkDelete" type="Reject" id="bulkDeleteBtn" visible="false"/>
-				<Button icon="sap-icon://warning" text="Update Price" press=".onBulkPriceBtn" type="Accept" id="UpdateBulkPriceBtn" visible="false"/>
-				<Button icon="sap-icon://add" press="onAddProduct"/>
-				<Button icon="sap-icon://refresh" press="onTablePersoRefresh">
+
+				<Button icon="sap-icon://add" text="{i18n>BTN_RESTOCK_SELECTED}" press=".onAddRestock" type="Reject" id="addRestock" visible="false"/>
+				<Button icon="sap-icon://delete" text="{i18n>BTN_DELETE_SELECTED}" press=".onBulkDelete" type="Reject" id="bulkDeleteBtn" visible="false"/>
+				<Button icon="sap-icon://warning" text="{i18n>BTN_UPDATE_PRICE}" press=".onBulkPriceBtn" type="Accept" id="UpdateBulkPriceBtn" visible="false"/>
+
+				<Button icon="sap-icon://add" text="{i18n>BTN_ADD_PRODUCT}" press="onAddProduct"/>
+				<Button icon="sap-icon://refresh" press="onTablePersoRefresh" tooltip="{i18n>BTN_TOOLTIP_REFRESH}">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
 				</Button>
-				<Button icon="sap-icon://excel-attachment" press=".onExportToExcel" />
-				<Button icon="sap-icon://action-settings" press="onPersoButtonPressed">
+				<Button icon="sap-icon://excel-attachment" press=".onExportToExcel" tooltip="{i18n>BTN_TOOLTIP_EXPORT}" />
+				<Button icon="sap-icon://action-settings" press="onPersoButtonPressed" tooltip="{i18n>BTN_TOOLTIP_SETTINGS}">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow" />
 					</layoutData>
@@ -49,7 +51,7 @@
 				<Text text="{i18n>COLUMN_LAST_RESTOCKED}" />
 			</Column>
 			<Column hAlign="Center">
-				<Text text="Actions" />
+				<Text text="{i18n>COLUMN_ACTIONS}" />
 			</Column>
 		</columns>
 
@@ -63,8 +65,8 @@
 					<Text text="{productModel>supplier}" />
 					<Text text="{productModel>lastRestocked}" />
 					<HBox justifyContent="Center" alignItems="Center" class="sapUiSmallMarginBeginEnd">
-						<Button icon="sap-icon://edit" press=".onEditProduct" tooltip="Edit Product" type="Transparent"/>
-						<Button icon="sap-icon://delete" press=".onDeleteProduct" tooltip="Delete Product" type="Transparent" class="sapUiTinyMarginBegin" enabled="{= !${viewModel>/isMultiSelectActive} }"/>
+						<Button icon="sap-icon://edit" press=".onEditProduct" tooltip="{i18n>TOOLTIP_EDIT_PRODUCT}" type="Transparent"/>
+						<Button icon="sap-icon://delete" press=".onDeleteProduct" tooltip="{i18n>TOOLTIP_DELETE_PRODUCT}" type="Transparent" class="sapUiTinyMarginBegin" enabled="{= !${viewModel>/isMultiSelectActive} }"/>
 					</HBox>
 				</cells>
 			</ColumnListItem>
